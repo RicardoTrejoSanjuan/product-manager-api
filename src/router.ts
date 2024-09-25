@@ -6,8 +6,8 @@ import { handleInputErrors } from "./middleware/index.js";
 const router = Router();
 
 // Routing
-
 router.get('/', getProducts)
+
 router.get('/:id',
     param('id').isInt().withMessage('Id is invalid'),
     handleInputErrors,

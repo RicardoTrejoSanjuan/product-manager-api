@@ -18,7 +18,6 @@ export const getProducts = async (req: Request, resp: Response) => {
     } catch (error) {
         log.error(error);
     }
-
 }
 
 export const getProductsById = async (req: Request, resp: Response) => {

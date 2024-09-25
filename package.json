@@ -7,11 +7,11 @@
     "start": "tsc && node dist/index.js",
     "build": "tsc",
     "dev": "nodemon src --exec 'npx tsx src/index.ts'",
+    "dev2-no-working": "tsc  && concurrently \"tsc -w\" \"nodemon dist/server.js \"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ricardo Trejo",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^22.6.1",
@@ -21,6 +21,7 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "concurrently": "^9.0.1",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "express-validator": "^7.2.0",

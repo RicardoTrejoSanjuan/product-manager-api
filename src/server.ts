@@ -5,7 +5,6 @@ import db from './config/db';
 import { Logger } from 'logger-colors';
 export const log = new Logger();
 
-
 async function connectDB() {
     try {
         await db.authenticate();
@@ -17,15 +16,10 @@ async function connectDB() {
     }
 }
 
-
 connectDB();
 
 const server = express();
 
-console.log('first')
-console.log('first')
-console.log('first')
-console.log('first')
 server.use(express.json())
 
 server.use('/api/v1/products', router);
